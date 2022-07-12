@@ -1,0 +1,37 @@
+{%extends "base.html"%}
+<title>{% block title %}PileofDirt.com{% endblock %}</title>
+
+{% block content %}
+    <h1> Your ratio is {{ ratio }}</h1>
+ <h3 align = "center">Add to your pile</h3>
+    <table class="table">
+  <thead>
+    <tr>
+        <th scope = "col">#</th>
+      <th scope="col">Ingredient</th>
+      <th scope="col">Volume(cubic feet)</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <form method="POST" class = form->
+    <tr>
+      <th scope="row">1</th>
+      <td>  <select class="col-8" id="ingredient" name ='ingredient'>
+            <optgroup label="Greens"></optgroup>
+            <option value="20">Coffee Grounds 20:1</option>
+            <option value="12">Vegetable Trimmings 12:1</option>
+            <optgroup label="Browns"></optgroup>
+            <option value="560">Paper 560:1</option>
+            <option value="60">Corn Stalks 60:1</option>
+    </select> </td>
+      <td><input type="number"
+               class="col-6"
+               id="volume"
+               name="volume"></td>
+      </tr>
+      <td> <button type="submit" class = "btn btn-primary"> Add it to pile!</button></td>
+      </form>
+    </tbody>
+</table>
+{% endblock %}
